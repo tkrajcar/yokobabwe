@@ -1,0 +1,19 @@
+This is yokobabwe, a WordPress 3.1 theme based on Yoko by Elmastudio.
+
+This theme is in use on timbabwe.com, and since Yoko is GPL, I have chosen to also release this theme under GPL.
+
+The most recent version of the theme can always be found at Github <https://github.com/tkrajcar/yokobabwe>.
+
+I will attempt to keep a document named CHANGES in the theme that documents what I have changed from the base Yoko.
+
+THIS THEME IS NOT SUITED FOR NON-DEVELOPERS. I may well have things hard-coded for my site. Patches will be welcome to un-do any of these, if anybody ends up using it.
+
+Just to be clear:
+
+THERE IS NO WARRANTY ON THIS THEME.
+THIS THEME SHOULD NOT BE USED ON PRODUCTION SITES.
+THERE IS NO EXPECTATION OF SUPPORT OFFERED FOR THIS THEME.
+
+That said, feel free to email me with questions, and I'll reply as able. 
+
+-Tim Krajcar - allegro@conmolto.org
