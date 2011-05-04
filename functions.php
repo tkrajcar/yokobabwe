@@ -261,18 +261,9 @@ endif;
  */
 function yoko_widgets_init() {
 	register_sidebar( array (
-		'name' => __( 'Sidebar 1', 'yoko' ),
-		'id' => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	register_sidebar( array (
-		'name' => __( 'Sidebar 2', 'yoko' ),
+		'name' => __( 'Main Sidebar', 'yoko' ),
 		'id' => 'sidebar-2',
-		'description' => __( 'An second sidebar area', 'yoko' ),
+		'description' => __( 'Main right-side sidebar area', 'yoko' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
