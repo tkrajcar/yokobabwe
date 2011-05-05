@@ -15,6 +15,7 @@ License URI: http://www.gnu.org/licenses/gpl.html
 /* Google Fonts Import
 --------------------------------------------- */
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|Droid+Serif:regular,italic,bold,bolditalic&subset=latin);
+@import url(http://fonts.googleapis.com/css?family=Francois+One:regular);
 
 /* Reset
 --------------------------------------------- */
@@ -329,10 +330,19 @@ nav#subnav ul.menu li.menu-item ul.sub-menu li.menu-item a {
 	padding: 0 0 20px;
 }
 #content .entry-details {
-	width: 22.507%;
-	padding: 2px 18px 0 0;
+	width: 8%;
 	float: left;
-	font: italic .8em/1.6 'Droid Serif',  Times, serif;
+	margin-right:18px;
+	text-align: center;
+	font: 1.4em/1.3 'Francois One',  arial, sans-serif;
+	text-transform: uppercase;
+	color: #009BC2;
+}
+#content .entry-details .day {
+	font-size: 140%;
+}
+#content .entry-details .year, #content .entry-details .month {
+	font-size: 80%;
 }
 #content .entry-details p span.entry-date, #content .entry-details p a {
 	width: 100%;
@@ -340,7 +350,7 @@ nav#subnav ul.menu li.menu-item ul.sub-menu li.menu-item a {
 	font-style: normal;
 }
 #content .entry-content {
-	width: 74.5%;
+	width: 89.5%;
 	margin: 0;
 	float: right;
 }
