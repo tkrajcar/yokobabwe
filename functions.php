@@ -291,12 +291,20 @@ function yoko_smoothscroll_init() {
         wp_enqueue_script( 'smoothscroll', get_template_directory_uri() . '/js/smoothscroll.js', array( 'jquery'), '1.0', true ); 
     }
 }
+
+function yokobabwe_categories_init() {
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'categories', get_template_directory_uri() . '/js/categories.js', array( 'jquery'), '1.0', true );
+}
+
 // works also for WP < version 3.0
 global $wp_version;
 if ( version_compare($wp_version, "3.0alpha", "<") ) {
     add_action( 'init', 'yoko_smoothscroll_init' );
+    add_action( 'init', 'yokobabwe_categories_init' );
 } else {
     add_action( 'after_setup_theme', 'yoko_smoothscroll_init' );
+   add_action ( 'after_setup_theme', 'yokobabwe_categories_init' );
 }
 
 /**
