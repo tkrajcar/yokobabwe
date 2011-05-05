@@ -4,7 +4,6 @@
  * @subpackage Yoko
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 <?php if ( has_post_thumbnail()) : ?>
@@ -16,7 +15,7 @@
 
 	<header class="single-entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-			<p><span class="entry-date"><?php echo get_the_date(); ?></span> <span class="entry-author"><?php _e( 'by', 'yoko' ); ?> <?php the_author() ?></span> <?php if ( comments_open() ) : ?> | <?php comments_popup_link( __( '0 comments', 'yoko' ), __( '1 Comment', 'yoko' ), __( '% Comments', 'yoko' ) ); ?><?php endif; ?></p> 
+			<p><span class="entry-date"><?php echo get_the_date(); ?></span> <?php if ( comments_open() ) : ?> | <?php comments_popup_link( __( '0 comments', 'yoko' ), __( '1 Comment', 'yoko' ), __( '% Comments', 'yoko' ) ); ?><?php endif; ?></p> 
 	</header>
 	<!--end Single Entry Header -->
 		
@@ -29,17 +28,23 @@
 			
 			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'yoko' ), 'after' => '</div>' ) ); ?>					
 	<?php endif; ?>
+
+	<?php if ( count( get_the_category() ) ) : ?>
+				<div class="categories">
+					Posted in:
+					<?php echo get_the_category_list(' '); ?>
+				</div>
+			<?php endif; ?>
 	
 	<footer class="single-entry-meta">
-		<p><?php if ( count( get_the_category() ) ) : ?>
-			<?php printf( __( 'Categories: %2$s', 'yoko' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?> | 
-			<?php endif; ?>
+		
 			<?php $tags_list = get_the_tag_list( '', ', ' ); 
 			if ( $tags_list ): ?>
-			<?php printf( __( 'Tags: %2$s', 'yoko' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?> | 
+			<p> 
+			<?php printf( __( 'Tags: %2$s', 'yoko' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>  
+			</p>
 			<?php endif; ?>
-			<a href="<?php echo get_permalink(); ?>"><?php _e( 'Permalink ', 'yoko' ); ?></a>
-			<?php edit_post_link( __( 'Edit &rarr;', 'yoko' ), '| <span class="edit-link">', '</span>' ); ?></p>
+			<?php edit_post_link( __( 'Edit &rarr;', 'yoko' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!--end entry meta-->
 
 	<?php if ( get_the_author_meta( 'description' ) ) :  ?>
