@@ -44,7 +44,7 @@
 		
 		<hgroup id="site-title">
 		<?php if( $yoko_settings['custom_logo'] ) : ?>
-			<img src="<?php echo $yoko_settings['custom_logo']; ?>" alt="<?php bloginfo('name'); ?>" />
+			<a href="<?php echo home_url( '/'); ?>"><img src="<?php echo $yoko_settings['custom_logo']; ?>" alt="<?php bloginfo('name'); ?>" /></a>
 			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 		<?php else : ?>
 			<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
