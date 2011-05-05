@@ -351,21 +351,20 @@ nav#subnav ul.menu li.menu-item ul.sub-menu li.menu-item a {
 }
 
 #content .categories {
-	font-size: 15px;
+	font-size: 12px;
 
 }
 #content .categories span {
-    padding: 0px 0px 0px 20px;
-    margin: 0;
-    background: url(./images/tag_bg_l.png) no-repeat left center;
-    display: inline-block;
+	padding: 0 0 0 15px;
+	margin: 0 0 0 5px;
+	background: url(./images/tag_bg_l.png) no-repeat left center;
+	display: inline-block;
 }
 
 #content .categories span a {
-    text-shadow: #f4f4f4 1px 1px 1px;
-    padding: 0px 10px 0px 2px;
-    background: url(./images/tag_bg_r.png) no-repeat right center;
-    display: inline-block;
+	padding: 0px 10px 0px 2px;
+	background: url(./images/tag_bg_r.png) no-repeat right center;
+	display: inline-block;
 }
 
 #content .entry-content {

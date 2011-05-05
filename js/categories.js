@@ -1,4 +1,4 @@
 jQuery(document).ready(function ($) {
-$('p.categories a').wrap('<span></span>');
+$('.categories a').wrap('<span></span>');
 
 });
