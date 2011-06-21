@@ -8,10 +8,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-details">
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array( 140,140 )); ?></a>
-		<div class="day"><?php echo get_the_date("j"); ?></div>	
+		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array( 140,140 )); ?>
+		<div class="day"><?php echo get_the_date("j"); ?></div>
 		<div class="month"><?php echo get_the_date("M"); ?></div>
 		<div class="year"><?php echo get_the_date("Y"); ?></div>
+		</a>
 
 	</div><!--end entry-details -->
     
