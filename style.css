@@ -73,6 +73,7 @@ body {
 	color: #777;
 }
 #page {
+	min-width: 620px;
 	max-width: 1102px;
 	margin: 12px auto;
 	padding:0 30px 30px;
@@ -205,6 +206,7 @@ a:hover {
 	text-transform:uppercase;
 	display: block;
 	float: left;
+	width: 300px;
 }
 #site-title h1 a:hover {
 	text-decoration:none;
@@ -212,7 +214,7 @@ a:hover {
 #site-title h2 {
 	font:italic .9em 'Droid Serif',  Times, serif;
 	color: #777;
-	margin: 52px 0 0 0;
+	margin: 10px 0 0 0;
 	display: inline;
 	float: right;
 }
@@ -349,7 +351,6 @@ nav#subnav ul.menu li.menu-item ul.sub-menu li.menu-item a {
 	font-family: 'Droid Sans', arial, sans-serif;
 	font-style: normal;
 }
-
 #content .categories {
 	font-size: 12px;
 
@@ -1105,8 +1106,8 @@ a.top:hover {
 }
 /* Media queries for responsive design
 --------------------------------------------- */
-/* --- iPad Landscape --- */
-@media screen and (max-width: 1024px) {
+/* --- 1100px --- */
+@media screen and (max-width: 1100px) {
 /* --- General --- */
 #page {
 	margin: 0 auto;
@@ -1128,6 +1129,7 @@ a.top:hover {
 	width:92.2%;
 	float: left;
 }
+
 #secondary {
 	width: 142px;
 	margin:40px 0 0;
@@ -1178,9 +1180,29 @@ nav#subnav ul.menu li.menu-item ul.sub-menu li.menu-item {
 .widget_categories ul li ul.children, .widget_nav_menu ul li ul.sub-menu, .widget_pages ul li ul.children {
 	margin: 5px 0 0 0;
 }
+
+#site-title #site-description {
+	width: 50%;
+        float: right;
+}
+#content .entry-details {
+	width: 100%;
+	float: none;
+	text-align: left;
+}
+#content .entry-details div {
+	display: inline
+}
+#content .entry-details .day {
+	font-size: 80%;
+}
+#content .entry-content {
+	width: 100%; float: none;
 }
 
-/* --- iPad Portrait --- */
+} /* end 1100px */
+
+/* --- 880px --- */
 @media screen and (max-width: 880px) {
 #page {
 	padding: 0 50px 30px 50px;
@@ -1212,6 +1234,11 @@ nav#subnav ul.menu li.menu-item ul.sub-menu li.menu-item {
 }
 #site-title h1 a {
 	margin: 0 auto;
+}
+#site-title #site-description {
+	display: block;
+	width: 50%;
+	float: none;
 }
 /* --- Main Nav --- */
 #branding #mainnav {
@@ -1269,9 +1296,24 @@ nav#subnav ul.menu li.menu-item ul.sub-menu li.menu-item a {
 #content .entry-content {
 	float: left;
 }
-#content .entry-details {
-	width: 15%;
+#site-description {
+        width: 50%; 
 }
+#content .entry-details {
+        width: 100%;
+        text-align: left;
+}
+#content .entry-details div {
+        display: inline;
+}
+#content .entry-details .day {
+        font-size: 80%;
+}
+#content .entry-content {
+        width: 100%;
+        float: none;
+}
+
 /* --- Sidebars --- */
 #secondary aside:last-child {
 	margin-bottom: 30px;
@@ -1280,146 +1322,4 @@ nav#subnav ul.menu li.menu-item ul.sub-menu li.menu-item a {
 #tertiary aside:last-child {
 	margin-bottom: 0;
 	border-bottom: none;
-}
-/* --- Smartphones and small Tablet PCs --- */
-@media screen and (max-width : 620px) {
-#page {
-	padding: 0 20px 20px;
-	background-color:#fff;
-}
-/* --- Header --- */
-#site-title {
-	float: left;
-	padding: 10px 0 5px;
-}
-#site-title h1 {
-	margin: 0;
-	text-align: center;
-	float: none;
-}
-#site-title h2 {
-	margin: 0;
-	text-align: center;
-}
-/* --- Main Nav --- */
-#branding #mainnav {
-	margin: 15px 0 0;
-}
-#branding #mainnav ul li a {
-	margin:0;
-	padding:8px 7px;
-	display: block;
-	font-size: .7em;
-}
-/* --- Sub Nav --- */
-nav#subnav ul.menu {
-	border-bottom: none;
-}
-nav#subnav ul.menu li.menu-item {
-	width: 100%;
-	margin:0;
-	float: none;
-	overflow: hidden;
-	background-color: #F0F0F0;
-	border-bottom: 1px solid #ddd;
-	text-align: center;
-}
-nav#subnav ul.menu li.menu-item a {
-	width: 100%;
-	margin: 0;
-	padding: 12px 0 11px;
-	float: left;
-	display: block;
-	background-color: #F0F0F0;
-}
-nav#subnav ul.menu li.menu-item a:hover, nav#subnav ul.menu li.menu-item a:active, nav#subnav ul.menu li.menu-item a:focus {
-	background: #D4D4D4;
-	text-decoration: none;
-}
-nav#subnav ul.menu li.menu-item ul.sub-menu li.menu-item {
-	display: none;
-}
-/* --- Post Content --- */
-#content .post {
-	margin: 0 0 30px;
-	padding: 0 0 30px;
-}
-#content .post .entry-header h2.entry-title {
-	font-size: 1.2em;
-}
-#content .entry-content {
-	width: 100%;
-}
-#content .entry-details {
-	display: none;
-}
-#content .post img.wp-post-image {
-	display: none;
-}
-#content .sticky {
-	padding: 10px;
-}
-/* --- Single Posts ---- */
-#content .single-entry-details {
-	display: none;
-}
-#content .single-entry-header .social-btn-top {
-	display: none;
-}
-#content .post .author-description p {
-	font-size: .8em;
-	line-height: 1.4;
-}
-#content .post .author-info .avatar {
-	display: none;
-}
-/* --- Comments ---- */
-form#commentform input#author, form#commentform input#email, form#commentform input#url {
-	width: 95%;
-}
-#content #comments ol li.depth-2, #content #comments ol li.depth-3, #content #comments ol li.depth-4, #content #comments ol li.depth-5 {
-	margin:0;
-}
-#comments img.avatar {
-	display: none;
-}
-a#cancel-comment-reply-link {
-	width: 100%;
-	margin:5px 0 15px;
-	display: block;
-}
-/* --- Post Nav Below --- */
-#content #nav-below .nav-previous a {
-	width: 100%;
-	display: block;
-	float: none;
-	margin: 0 0 10px;
-}
-#content #nav-below .nav-next a {
-	width: 100%;
-	display: block;
-	text-align: right;
-}
-#content #nav-below .nav-previous a:hover, #content #nav-below .nav-next a:hover {
-	text-decoration: none;
-}
-/* --- Post Formats ---- */
-#content .entry-post-format .entry-content-gallery {
-	width: 100%;
-	float: none;
-}
-#content .entry-post-format .gallery-thumb {
-	width: 100%;
-	float: none;
-	margin: 5px 15px 15px 0;
-}
-/* --- Pages ---- */
-#content .page .wpcf7 input.textfield {
-	width: 95%;
-}
-/* --- Footer ---- */
-#colophon {
-	width: 100%;
-	float: none;
-}
 }
