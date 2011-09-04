@@ -8,7 +8,7 @@
 
 <?php if ( has_post_thumbnail()) : ?>
 		<div class="single-entry-details">
-			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array( 140,140 )); ?></a>
+			<a href="<?php the_permalink(); ?>"><?php //the_post_thumbnail(array( 140,140 )); ?></a>
 		</div>
 		<!--end Single Entry Details -->
 		<?php endif; ?>
